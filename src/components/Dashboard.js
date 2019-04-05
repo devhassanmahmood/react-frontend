@@ -26,7 +26,7 @@ class Dashboard extends React.Component {
     let component = null;
     switch(this.state.context) {
       case "youtube":
-        component = <Spotify />;
+        component = <VideoContainer />;
         break;
       default:
         component = this.state.context
@@ -34,6 +34,8 @@ class Dashboard extends React.Component {
     return (<div>
       <div className="region left">
         <Clock/>
+      </div>
+      <div className="region middle center">
         {component}
       </div>
       <div className="region right">
